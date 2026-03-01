@@ -1,1 +1,1 @@
-quiz_bot.py
+worker: python quiz_bot.py
