@@ -635,7 +635,7 @@ def main():
     app.add_handler(CallbackQueryHandler(siralama_goster, pattern="^siralama_"))
     app.add_handler(PollAnswerHandler(poll_answer))
     print("✅ Quiz Bot çalışıyor...")
-    app.run_polling(close_loop=False)
+    app.run_polling()
 
 if __name__ == "__main__":
     main()
