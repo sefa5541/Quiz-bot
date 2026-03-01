@@ -1,45 +1,157 @@
 [
-  { "kategori": "İYUK", "question": "İdari yargıda yazılı yargılama usulü uygulanır. Ancak Danıştay, bölge idare mahkemeleri ve idare mahkemelerinde bakılan davalarda taraflardan birinin isteği üzerine ne yapılabilir?", "options": ["Keşif", "Duruşma", "Bilirkişi incelemesi", "Sözlü savunma"], "correct_option_id": 1, "explanation": "Madde 17/1: İptal ve 25.000 TL'yi aşan tam yargı davalarında tarafların isteği üzerine duruşma yapılır." },
-  { "kategori": "İYUK", "question": "Dava açma süresi geçtikten sonra idari makamlara yapılan başvurular süreyi nasıl etkiler?", "options": ["Süreyi canlandırır", "Süreyi durdurur", "Geçmiş süreyi etkilemez", "Süreyi sıfırlar"], "correct_option_id": 2, "explanation": "Madde 7: Süre geçtikten sonra yapılan başvurular, bitmiş olan dava açma süresini yeniden başlatmaz." },
-  { "kategori": "İYUK", "question": "İvedi yargılama usulünde, savunma verme süresi kaç gündür?", "options": ["7 gün", "15 gün", "30 gün", "60 gün"], "correct_option_id": 1, "explanation": "Madde 20/A: İvedi yargılama usulünde savunma süresi 15 gündür." },
-  { "kategori": "İYUK", "question": "Aşağıdakilerden hangisi idari yargıda ilk inceleme konularından biri değildir?", "options": ["Görev ve yetki", "Ehliyet", "İşlemin yerindeliği", "Süre aşımı"], "correct_option_id": 2, "explanation": "Madde 14: İlk incelemede görev, yetki, ehliyet, süre gibi hususlara bakılır. Yerindelik incelemesi yapılamaz." },
-  { "kategori": "İYUK", "question": "Danıştay'da dava açma süresi kural olarak kaç gündür?", "options": ["15", "30", "60", "90"], "correct_option_id": 2, "explanation": "Madde 7/1: Danıştay ve idare mahkemelerinde genel dava açma süresi 60 gündür." },
-  { "kategori": "İYUK", "question": "Vergi mahkemelerinde dava açma süresi kural olarak kaç gündür?", "options": ["15", "30", "45", "60"], "correct_option_id": 1, "explanation": "Madde 7/1: Vergi mahkemelerinde dava açma süresi 30 gündür." },
-  { "kategori": "İYUK", "question": "İdari yargıda davanın ihbarı hangi kanun hükümlerine göre yapılır?", "options": ["CMK", "HMK", "İcra İflas Kanunu", "TMK"], "correct_option_id": 1, "explanation": "Madde 31: Bu kanunda hüküm bulunmayan hallerde Hukuk Muhakemeleri Kanunu (HMK) uygulanır." },
-  { "kategori": "İYUK", "question": "Tam yargı davalarında, uyuşmazlık miktarının artırılması (ıslah) kaç kez yapılabilir?", "options": ["Sınırsız", "2", "1", "Hiç yapılamaz"], "correct_option_id": 2, "explanation": "Madde 16/4: Tam yargı davalarında dava dilekçesinde belirtilen miktar, bir defaya mahsus olmak üzere artırılabilir." },
-  { "kategori": "İYUK", "question": "İstinaf yoluna başvurulmuş olması, kararın yürütülmesini kendiliğinden durdurur mu?", "options": ["Evet, durdurur", "Hayır, durdurmaz", "Sadece memur davalarında durdurur", "Sadece vergi davalarında durdurur"], "correct_option_id": 1, "explanation": "Madde 52/1: Temyiz veya istinaf yoluna başvurulmuş olması, kararın yürütülmesini durdurmaz." },
-  { "kategori": "İYUK", "question": "Bölge idare mahkemesi kararlarına karşı hangi yola başvurulabilir?", "options": ["İstinaf", "Temyiz", "İtiraz", "Karar düzeltme"], "correct_option_id": 1, "explanation": "Madde 46: Bölge idare mahkemesi kararlarına karşı Danıştay'da temyiz yoluna başvurulabilir." },
-  { "kategori": "İYUK", "question": "İdari yargıda yanlış hasım (husumet) gösterilmesi halinde ne yapılır?", "options": ["Dava reddedilir", "Dosya işlemden kaldırılır", "Dava gerçek hasma tebliğ edilir", "Dava düşer"], "correct_option_id": 2, "explanation": "Madde 15/1-c: Davanın yanlış hasma açılması halinde, dilekçenin gerçek hasma tebliğine karar verilir." },
-  { "kategori": "İYUK", "question": "İdari makamların sessiz kalması (sükutu) kaç gün sonra reddedilmiş sayılır?", "options": ["15", "30", "60", "90"], "correct_option_id": 1, "explanation": "Madde 10: Otuz gün içinde cevap verilmezse istek reddedilmiş sayılır." },
-  { "kategori": "İYUK", "question": "Kararın düzeltilmesi yolu idari yargıda halen mevcut mudur?", "options": ["Evet", "Hayır (Kaldırıldı)", "Sadece Danıştay'da var", "Sadece Vergi'de var"], "correct_option_id": 1, "explanation": "7035 sayılı Kanun ile karar düzeltme yolu idari yargılama usulünden kaldırılmıştır." },
-  { "kategori": "İYUK", "question": "Yürütmenin durdurulması kararı verilebilmesi için işlemin hangi özelliği taşıması gerekir?", "options": ["Açıkça hukuka aykırı olması", "Telafisi güç zarar doğurması", "Hem hukuka aykırı hem telafisi güç zarar olması", "Kamu yararına aykırı olması"], "correct_option_id": 2, "explanation": "Madde 27: İki şartın (hukuka aykırılık ve telafisi güç zarar) birlikte gerçekleşmesi zorunludur." },
-  { "kategori": "İYUK", "question": "Dava açma süresini durduran 'üst makama başvuru' (Madde 11), kaç gün içinde yapılmalıdır?", "options": ["15", "30", "60", "90"], "correct_option_id": 2, "explanation": "Madde 11: İlgililer tarafından idari dava açılmadan önce, idari işlemin kaldırılması veya değiştirilmesi üst makamdan 60 gün içinde istenebilir." },
-  { "kategori": "İYUK", "question": "Keşif ve bilirkişi masraflarının süresinde yatırılmaması halinde ne olur?", "options": ["Dava reddedilir", "Dosya yenilenene kadar bekletilir", "Mevcut delillere göre karar verilir veya dava açılmamış sayılır", "İdare kazanmış sayılır"], "correct_option_id": 2, "explanation": "Madde 31 (HMK atfıyla): Giderler yatırılmazsa o delilden vazgeçilmiş sayılır; temel giderse dava açılmamış sayılabilir." },
-  { "kategori": "İYUK", "question": "İdari sözleşmelerden doğan davalar hangi mahkemede görülür?", "options": ["Asliye Hukuk", "İdare Mahkemesi", "Danıştay", "Sayıştay"], "correct_option_id": 1, "explanation": "Madde 2: İdari sözleşmelerden dolayı taraflar arasında çıkan uyuşmazlıklara ilişkin davalar idari yargıda görülür." },
-  { "kategori": "İYUK", "question": "Bölge İdare Mahkemeleri arasındaki yetki uyuşmazlığını kim çözer?", "options": ["Anayasa Mahkemesi", "Yargıtay", "Danıştay", "İçişleri Bakanlığı"], "correct_option_id": 2, "explanation": "Madde 43: Bölge idare mahkemeleri arasındaki yetki ve görev uyuşmazlıklarını Danıştay çözer." },
-  { "kategori": "İYUK", "question": "Aynı yanlışlıkların yapılması nedeniyle dilekçesi ikinci kez reddedilen davacının durumu ne olur?", "options": ["Tekrar dava açabilir", "Davası reddedilir", "Davası düşer", "Hakim uyarılır"], "correct_option_id": 1, "explanation": "Madde 15/5: Dilekçelerdeki yanlışlıklar giderilmezse, davanın reddine karar verilir." },
-  { "kategori": "İYUK", "question": "Feragat (davadan vazgeçme) halinde yargılama giderleri kime yüklenir?", "options": ["İdareye", "Yarı yarıya paylaştırılır", "Feragat eden tarafa", "Devlet karşılar"], "correct_option_id": 2, "explanation": "HMK hükümleri gereği feragat eden taraf haksız çıkmış sayılır ve giderleri öder." }
-  
   {
     "kategori": "İYUK",
-    "question": "İdari yargıda kural olarak uygulanan yargılama usulü hangisidir?",
-    "options": ["Sözlü yargılama usulü", "Yazılı yargılama usulü", "Pazarlık usulü", "Tahkim usulü"],
+    "question": "İdari yargıda yazılı yargılama usulü uygulanır. Ancak Danıştay, bölge idare mahkemeleri ve idare mahkemelerinde bakılan davalarda taraflardan birinin isteği üzerine ne yapılabilir?",
+    "options": ["Keşif", "Duruşma", "Bilirkişi incelemesi", "Sözlü savunma"],
     "correct_option_id": 1,
-    "explanation": "Madde 1/2: İdari yargıda yazılı yargılama usulü uygulanır ve inceleme evrak üzerinde yapılır."
+    "explanation": "Madde 17/1: İptal ve 25.000 TL'yi aşan tam yargı davalarında tarafların isteği üzerine duruşma yapılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Dava açma süresi geçtikten sonra idari makamlara yapılan başvurular süreyi nasıl etkiler?",
+    "options": ["Süreyi canlandırır", "Süreyi durdurur", "Geçmiş süreyi etkilemez", "Süreyi sıfırlar"],
+    "correct_option_id": 2,
+    "explanation": "Madde 7: Süre geçtikten sonra yapılan başvurular, bitmiş olan dava açma süresini yeniden başlatmaz."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İvedi yargılama usulünde, savunma verme süresi kaç gündür?",
+    "options": ["7 gün", "15 gün", "30 gün", "60 gün"],
+    "correct_option_id": 1,
+    "explanation": "Madde 20/A: İvedi yargılama usulünde savunma süresi 15 gündür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Aşağıdakilerden hangisi idari yargıda ilk inceleme konularından biri değildir?",
+    "options": ["Görev ve yetki", "Ehliyet", "İşlemin yerindeliği", "Süre aşımı"],
+    "correct_option_id": 2,
+    "explanation": "Madde 14: İlk incelemede görev, yetki, ehliyet, süre gibi hususlara bakılır. Yerindelik incelemesi yapılamaz."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Danıştay'da dava açma süresi kural olarak kaç gündür?",
+    "options": ["15", "30", "60", "90"],
+    "correct_option_id": 2,
+    "explanation": "Madde 7/1: Danıştay ve idare mahkemelerinde genel dava açma süresi 60 gündür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Vergi mahkemelerinde dava açma süresi kural olarak kaç gündür?",
+    "options": ["15", "30", "45", "60"],
+    "correct_option_id": 1,
+    "explanation": "Madde 7/1: Vergi mahkemelerinde dava açma süresi 30 gündür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari yargıda davanın ihbarı hangi kanun hükümlerine göre yapılır?",
+    "options": ["CMK", "HMK", "İcra İflas Kanunu", "TMK"],
+    "correct_option_id": 1,
+    "explanation": "Madde 31: Bu kanunda hüküm bulunmayan hallerde Hukuk Muhameleri Kanunu (HMK) uygulanır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Tam yargı davalarında, uyuşmazlık miktarının artırılması (ıslah) kaç kez yapılabilir?",
+    "options": ["Sınırsız", "2", "1", "Hiç yapılamaz"],
+    "correct_option_id": 2,
+    "explanation": "Madde 16/4: Tam yargı davalarında dava dilekçesinde belirtilen miktar, bir defaya mahsus olmak üzere artırılabilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İstinaf yoluna başvurulmuş olması, kararın yürütülmesini kendiliğinden durdurur mu?",
+    "options": ["Evet, durdurur", "Hayır, durdurmaz", "Sadece memur davalarında durdurur", "Sadece vergi davalarında durdurur"],
+    "correct_option_id": 1,
+    "explanation": "Madde 52/1: Temyiz veya istinaf yoluna başvurulmuş olması, kararın yürütülmesini durdurmaz."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Bölge idare mahkemesi kararlarına karşı hangi yola başvurulabilir?",
+    "options": ["İstinaf", "Temyiz", "İtiraz", "Karar düzeltme"],
+    "correct_option_id": 1,
+    "explanation": "Madde 46: Bölge idare mahkemesi kararlarına karşı Danıştay'da temyiz yoluna başvurulabilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari yargıda yanlış hasım (husumet) gösterilmesi halinde ne yapılır?",
+    "options": ["Dava reddedilir", "Dosya işlemden kaldırılır", "Dava gerçek hasma tebliğ edilir", "Dava düşer"],
+    "correct_option_id": 2,
+    "explanation": "Madde 15/1-c: Davanın yanlış hasma açılması halinde, dilekçenin gerçek hasma tebliğine karar verilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari makamların sessiz kalması (sükutu) kaç gün sonra reddedilmiş sayılır?",
+    "options": ["15", "30", "60", "90"],
+    "correct_option_id": 1,
+    "explanation": "Madde 10: Otuz gün içinde cevap verilmezse istek reddedilmiş sayılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Kararın düzeltilmesi yolu idari yargıda halen mevcut mudur?",
+    "options": ["Evet", "Hayır (Kaldırıldı)", "Sadece Danıştay'da var", "Sadece Vergi'da var"],
+    "correct_option_id": 1,
+    "explanation": "7035 sayılı Kanun ile karar düzeltme yolu idari yargılama usulünden kaldırılmıştır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Yürütmenin durdurulması kararı verilebilmesi için işlemin hangi özelliği taşıması gerekir?",
+    "options": ["Açıkça hukuka aykırı olması", "Telafisi güç zarar doğurması", "Hem hukuka aykırı hem telafisi güç zarar olması", "Kamu yararına aykırı olması"],
+    "correct_option_id": 2,
+    "explanation": "Madde 27: İki şartın (hukuka aykırılık ve telafisi güç zarar) birlikte gerçekleşmesi zorunludur."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Dava açma süresini durduran 'üst makama başvuru' (Madde 11), kaç gün içinde yapılmalıdır?",
+    "options": ["15", "30", "60", "90"],
+    "correct_option_id": 2,
+    "explanation": "Madde 11: İlgililer tarafından idari dava açılmadan önce, idari işlemin kaldırılması veya değiştirilmesi üst makamdan 60 gün içinde istenebilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Keşif ve bilirkişi masraflarının süresinde yatırılmaması halinde ne olur?",
+    "options": ["Dava reddedilir", "Dosya yenilenene kadar bekletilir", "Mevcut delillere göre karar verilir veya dava açılmamış sayılır", "İdare kazanmış sayılır"],
+    "correct_option_id": 2,
+    "explanation": "Madde 31 (HMK atfıyla): Giderler yatırılmazsa o delilden vazgeçilmiş sayılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari sözleşmelerden doğan davalar hangi mahkemede görülür?",
+    "options": ["Asliye Hukuk", "İdare Mahkemesi", "Danıştay", "Sayıştay"],
+    "correct_option_id": 1,
+    "explanation": "Madde 2: İdari sözleşmelerden dolayı taraflar arasında çıkan uyuşmazlıklara ilişkin davalar idari yargıda görülür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Bölge İdare Mahkemeleri arasındaki yetki uyuşmazlığını kim çözer?",
+    "options": ["Anayasa Mahkemesi", "Yargıtay", "Danıştay", "İçişleri Bakanlığı"],
+    "correct_option_id": 2,
+    "explanation": "Madde 43: Bölge idare mahkemeleri arasındaki yetki ve görev uyuşmazlıklarını Danıştay çözer."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Aynı yanlışlıkların yapılması nedeniyle dilekçesi ikinci kez reddedilen davacının durumu ne olur?",
+    "options": ["Tekrar dava açabilir", "Davası reddedilir", "Davası düşer", "Hakim uyarılır"],
+    "correct_option_id": 1,
+    "explanation": "Madde 15/5: Dilekçelerdeki yanlışlıklar giderilmezse, davanın reddine karar verilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Feragat (davadan vazgeçme) halinde yargılama giderleri kime yüklenir?",
+    "options": ["İdareye", "Yarı yarıya paylaştırılır", "Feragat eden tarafa", "Devlet karşılar"],
+    "correct_option_id": 2,
+    "explanation": "HMK hükümleri gereği feragat eden taraf haksız çıkmış sayılır ve giderleri öder."
   },
   {
     "kategori": "İYUK",
     "question": "İdari dava açma süresi kural olarak ne kadardır?",
     "options": ["İdare Mahkemelerinde 30 gün", "Danıştay ve İdare Mahkemelerinde 60 gün", "Vergi Mahkemelerinde 60 gün", "Hepsinde 15 gün"],
     "correct_option_id": 1,
-    "explanation": "Madde 7/1: Dava açma süresi Danıştayda ve idare mahkemelerinde 60, vergi mahkemelerinde 30 gündür."
+    "explanation": "Madde 7/1: Dava açma süresi Danıştayda ve idare mahkemelerinde 60 gündür."
   },
   {
     "kategori": "İYUK",
     "question": "Dava açma süresinin bitmesi 'Çalışmaya Ara Verme' (Adli Tatil) zamanına rastlarsa, süre ne kadar uzar?",
     "options": ["3 gün", "7 gün", "15 gün", "30 gün"],
     "correct_option_id": 1,
-    "explanation": "Madde 8/3: Sürelerin bitmesi ara verme zamanına rastlarsa, ara vermenin sona erdiği günü izleyen tarihten itibaren yedi gün uzamış sayılır."
+    "explanation": "Madde 8/3: Ara vermenin sona erdiği günü izleyen tarihten itibaren yedi gün uzamış sayılır."
   },
   {
     "kategori": "İYUK",
@@ -57,21 +169,7 @@
   },
   {
     "kategori": "İYUK",
-    "question": "İvedi yargılama usulünde dava açma süresi kaç gündür?",
-    "options": ["15 gün", "30 gün", "45 gün", "60 gün"],
-    "correct_option_id": 1,
-    "explanation": "Madde 20/A: İvedi yargılama usulünde dava açma süresi 30 gündür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Aşağıdakilerden hangisi idari dava türlerinden biri değildir?",
-    "options": ["İptal davası", "Tam yargı davası", "İdari sözleşme davası", "Tespit davası"],
-    "correct_option_id": 3,
-    "explanation": "Madde 2/1: İdari dava türleri iptal, tam yargı ve idari sözleşme davalarıdır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari eylemlerden hakları ihlal edilenlerin idareye başvurmaları için öngörülen üst süre sınırı (her halde) nedir?",
+    "question": "İdari eylemlerden hakları ihlal edilenlerin idareye başvurmaları için öngörülen üst süre sınırı nedir?",
     "options": ["1 yıl", "2 yıl", "5 yıl", "10 yıl"],
     "correct_option_id": 2,
     "explanation": "Madde 13/1: Eylem tarihinden itibaren en geç beş yıl içinde başvurulmalıdır."
