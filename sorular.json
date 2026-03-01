@@ -1,0 +1,100 @@
+[
+  {
+    "kategori": "İYUK",
+    "question": "İdari yargıda kural olarak uygulanan yargılama usulü hangisidir?",
+    "options": ["Sözlü yargılama usulü", "Yazılı yargılama usulü", "Pazarlık usulü", "Tahkim usulü"],
+    "correct_option_id": 1,
+    "explanation": "Madde 1/2: İdari yargıda yazılı yargılama usulü uygulanır ve inceleme evrak üzerinde yapılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari dava açma süresi kural olarak ne kadardır?",
+    "options": ["İdare Mahkemelerinde 30 gün", "Danıştay ve İdare Mahkemelerinde 60 gün", "Vergi Mahkemelerinde 60 gün", "Hepsinde 15 gün"],
+    "correct_option_id": 1,
+    "explanation": "Madde 7/1: Dava açma süresi Danıştayda ve idare mahkemelerinde 60, vergi mahkemelerinde 30 gündür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Dava açma süresinin bitmesi 'Çalışmaya Ara Verme' (Adli Tatil) zamanına rastlarsa, süre ne kadar uzar?",
+    "options": ["3 gün", "7 gün", "15 gün", "30 gün"],
+    "correct_option_id": 1,
+    "explanation": "Madde 8/3: Sürelerin bitmesi ara verme zamanına rastlarsa, ara vermenin sona erdiği günü izleyen tarihten itibaren yedi gün uzamış sayılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari makamlara yapılan başvurularda kaç gün içinde cevap verilmezse istek reddedilmiş sayılır?",
+    "options": ["15 gün", "30 gün", "60 gün", "90 gün"],
+    "correct_option_id": 1,
+    "explanation": "Madde 10/2: Otuz gün içinde bir cevap verilmezse istek reddedilmiş sayılır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Yürütmenin durdurulması kararına karşı kaç gün içinde itiraz edilebilir?",
+    "options": ["7 gün", "15 gün", "30 gün", "60 gün"],
+    "correct_option_id": 0,
+    "explanation": "Madde 27/7: Yürütmenin durdurulması kararlarına karşı 7 gün içinde itiraz edilebilir."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İvedi yargılama usulünde dava açma süresi kaç gündür?",
+    "options": ["15 gün", "30 gün", "45 gün", "60 gün"],
+    "correct_option_id": 1,
+    "explanation": "Madde 20/A: İvedi yargılama usulünde dava açma süresi 30 gündür."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "Aşağıdakilerden hangisi idari dava türlerinden biri değildir?",
+    "options": ["İptal davası", "Tam yargı davası", "İdari sözleşme davası", "Tespit davası"],
+    "correct_option_id": 3,
+    "explanation": "Madde 2/1: İdari dava türleri iptal, tam yargı ve idari sözleşme davalarıdır."
+  },
+  {
+    "kategori": "İYUK",
+    "question": "İdari eylemlerden hakları ihlal edilenlerin idareye başvurmaları için öngörülen üst süre sınırı (her halde) nedir?",
+    "options": ["1 yıl", "2 yıl", "5 yıl", "10 yıl"],
+    "correct_option_id": 2,
+    "explanation": "Madde 13/1: Eylem tarihinden itibaren en geç beş yıl içinde başvurulmalıdır."
+  },
+  {
+    "kategori": "CMK",
+    "question": "Gözaltı süresi, yakalama anından itibaren en fazla kaç saattir?",
+    "options": ["12 saat", "24 saat", "48 saat", "72 saat"],
+    "correct_option_id": 1,
+    "explanation": "📖 Gözaltı süresi yirmi dört saati geçemez."
+  },
+  {
+    "kategori": "CMK",
+    "question": "Tutuklama kararını hangi merci verir?",
+    "options": ["Savcı", "Kolluk Amiri", "Sulh Ceza Hâkimi", "Vali"],
+    "correct_option_id": 2,
+    "explanation": "📖 Soruşturma evresinde tutuklama kararını Sulh Ceza Hâkimi verir."
+  },
+  {
+    "kategori": "CMK",
+    "question": "İfade almada en çok kaç müdafi (avukat) hazır bulunabilir?",
+    "options": ["1", "2", "3", "Sınırsız"],
+    "correct_option_id": 2,
+    "explanation": "📖 İfade almada en çok üç müdafi hazır bulunabilir."
+  },
+  {
+    "kategori": "VATANDASLIK",
+    "question": "Türkiye'de seçim barajı yüzde kaçtır?",
+    "options": ["%5", "%7", "%10", "%3"],
+    "correct_option_id": 1,
+    "explanation": "📖 Türkiye'de seçim barajı %7'dir."
+  },
+  {
+    "kategori": "VATANDASLIK",
+    "question": "Anayasa Mahkemesi kaç üyeden oluşur?",
+    "options": ["11", "13", "15", "17"],
+    "correct_option_id": 2,
+    "explanation": "📖 AYM 15 üyeden oluşur."
+  },
+  {
+    "kategori": "VATANDASLIK",
+    "question": "TBMM toplam kaç milletvekilinden oluşur?",
+    "options": ["450", "550", "600", "650"],
+    "correct_option_id": 2,
+    "explanation": "📖 TBMM toplam 600 milletvekilinden oluşur."
+  }
+]
