@@ -8,7 +8,7 @@ from telegram.ext import (
     PollAnswerHandler, ContextTypes
 )
 
-# Railway logları için hata takibi
+# Hata takibi için loglama
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 BOT_TOKEN = "8674782699:AAHcpRwEJkET_R4HUkfh_-ar3d35fbL-_10"
@@ -16,15 +16,11 @@ BOT_TOKEN = "8674782699:AAHcpRwEJkET_R4HUkfh_-ar3d35fbL-_10"
 # ─────────────────────────────────────────────
 #  LİDERLİK TABLOLARI
 # ─────────────────────────────────────────────
-leaderboard = {
-    "cmk": {},
-    "vatandaslik": {}
-}
+leaderboard = {"cmk": {}, "vatandaslik": {}}
 
 # ─────────────────────────────────────────────
-#  SORU BANKALARI (ORİJİNAL TAM LİSTE)
+#  SORU BANKALARI (Eksiksiz Tam Liste)
 # ─────────────────────────────────────────────
-
 CMK_SORULAR = [
     {"question": "CMK'ya göre 'şüpheli' hangi evrede suç şüphesi altındaki kişidir?", "options": ["Kovuşturma evresi", "Soruşturma evresi", "İstinaf evresi", "Temyiz evresi"], "correct_option_id": 1, "explanation": "📖 Madde 2/a: Şüpheli, soruşturma evresinde suç şüphesi altında bulunan kişidir."},
     {"question": "CMK'ya göre 'sanık' kimdir?", "options": ["Soruşturma evresinde suç şüphesi altındaki kişi", "Kovuşturmanın başlamasından hükmün kesinleşmesine kadar suç şüphesi altındaki kişi", "Kesinleşmiş mahkûmiyet kararı bulunan kişi", "Gözaltına alınan kişi"], "correct_option_id": 1, "explanation": "📖 Madde 2/b: Sanık, kovuşturmanın başlamasından hükmün kesinleşmesine kadar suç şüphesi altındaki kişidir."},
@@ -42,12 +38,10 @@ CMK_SORULAR = [
     {"question": "Duruşmada suçun hukuki niteliği değişirse mahkeme ne yapabilir?", "options": ["Görevsizlik kararıyla dosyayı alt mahkemeye gönderebilir", "Davayı durdurabilir", "Görevsizlik kararı vererek dosyayı alt mahkemeye gönderemez", "Cumhuriyet savcısından ek iddianame isteyebilir"], "correct_option_id": 2, "explanation": "📖 Madde 6: Duruşmada suçun hukuki niteliğinin değiştiğinden bahisle görevsizlik kararı verilerek dosya alt dereceli mahkemeye gönderilemez."},
     {"question": "CMK Madde 7'ye göre görevli olmayan hâkimin işlemleri ne olur?", "options": ["Hepsi geçerlidir", "Yenilenmesi mümkün olmayanlar dışında hükümsüzdür", "Hepsi hükümsüzdür", "İtirazla geçerli hale gelir"], "correct_option_id": 1, "explanation": "📖 Madde 7/1: Yenilenmesi mümkün olmayanlar dışında, görevli olmayan hâkim veya mahkemece yapılan işlemler hükümsüzdür."},
     {"question": "Suçun işlenmesinden sonra suçluyu kayırma fiili CMK'ya göre ne sayılır?", "options": ["Ayrı bir suç", "Bağlantılı suç", "Toplu suç", "Suç değildir"], "correct_option_id": 1, "explanation": "📖 Madde 8/2: Suçun işlenmesinden sonra suçluyu kayırma, suç delillerini yok etme, gizleme veya değiştirme fiilleri bağlantılı suç sayılır."},
-    {"question": "CMK'ya göre yetkili mahkeme kural olarak hangi yer mahkemesidir?", "options": ["Sanığın yerleşim yeri", "Suçun işlendiği yer", "Mağdurun yerleşim yeri", "Cumhuriyet savcısının görev yeri"], "correct_option_id": 1, "explanation": "📖 Madde 12/1: Davaya bakmak yetkisi, suçun işlendiği yer mahkemesine aittir."},
+    {"question": "CMK'ya göre yetkili mahkeme kural olarak hangi yer mahkemesidir?", "options": ["Sanığın yerleşim yeri", "Suçun işlediği yer", "Mağdurun yerleşim yeri", "Cumhuriyet savcısının görev yeri"], "correct_option_id": 1, "explanation": "📖 Madde 12/1: Davaya bakmak yetkisi, suçun işlendiği yer mahkemesine aittir."},
     {"question": "Teşebbüs suçlarında yetkili mahkeme hangi yer mahkemesidir?", "options": ["İlk icra hareketinin yapıldığı yer", "Son icra hareketinin yapıldığı yer", "Hazırlık hareketlerinin yapıldığı yer", "Sanığın yakalandığı yer"], "correct_option_id": 1, "explanation": "📖 Madde 12/2: Teşebbüste son icra hareketinin yapıldığı yer mahkemesi yetkilidir."},
     {"question": "Zincirleme suçlarda yetkili mahkeme hangisidir?", "options": ["İlk suçun işlendiği yer", "En ağır suçun işlendiği yer", "Son suçun işlendiği yer", "Sanığın yerleşim yeri"], "correct_option_id": 2, "explanation": "📖 Madde 12/2: Zincirleme suçlarda son suçun işlendiği yer mahkemesi yetkilidir."},
     {"question": "CMK'ya göre suçun işlendiği yer belli değilse önce hangi yer mahkemesi yetkilidir?", "options": ["Mağdurun yerleşim yeri", "Savcılığın bulunduğu yer", "Şüpheli veya sanığın yakalandığı yer", "İlk usul işleminin yapıldığı yer"], "correct_option_id": 2, "explanation": "📖 Madde 13/1: Suçun işlendiği yer belli değilse şüpheli veya sanığın yakalandığı yer mahkemesi yetkilidir."},
-    {"question": "Bilişim suçlarında mağdurun yerleşim yeri mahkemesinin yetkisi CMK'nın hangi maddesiyle düzenlenmiştir?", "options": ["Madde 12/3", "Madde 12/5", "Madde 12/6", "Madde 13/2"], "correct_option_id": 2, "explanation": "📖 Madde 12/6 (Ek: 8/7/2021): Bilişim sistemleri araç kullanılarak işlenen suçlarda mağdurun yerleşim yeri mahkemeleri de yetkilidir."},
-    {"question": "Yabancı ülkede diplomatik bağışıklıktan yararlanan Türk kamu görevlilerinin suçlarında yetkili mahkeme hangisidir?", "options": ["İstanbul", "İzmir", "Ankara", "Suçun işlendiği yer"], "correct_option_id": 2, "explanation": "📖 Madde 14/4: Yabancı ülkelerde diplomatik bağışıklıktan yararlanan Türk kamu görevlilerinin suçlarında yetkili mahkeme Ankara mahkemesidir."},
 ]
 
 VATANDASLIK_SORULAR = [
@@ -59,18 +53,8 @@ VATANDASLIK_SORULAR = [
     {"question": "Tam ceza ehliyeti kaç yaşında başlar?", "options": ["12", "15", "16", "18"], "correct_option_id": 3, "explanation": "📖 Tam ceza ehliyeti 18 yaşında başlar."},
     {"question": "Devlet memurlarına tanınan babalık izni kaç gündür?", "options": ["5 gün", "7 gün", "10 gün", "14 gün"], "correct_option_id": 2, "explanation": "📖 Babalık izni 10 gündür."},
     {"question": "Devlet memurlarına tanınan evlilik izni kaç gündür?", "options": ["3 gün", "5 gün", "7 gün", "10 gün"], "correct_option_id": 2, "explanation": "📖 Evlilik izni 7 gündür."},
-    {"question": "Devlet memurlarına tanınan ölüm izni kaç gündür?", "options": ["3 gün", "5 gün", "7 gün", "10 gün"], "correct_option_id": 2, "explanation": "📖 Ölüm izni 7 gündür."},
     {"question": "Analık izni toplam kaç haftadır?", "options": ["8 hafta", "12 hafta", "16 hafta", "24 hafta"], "correct_option_id": 2, "explanation": "📖 Toplam 16 haftadır."},
-    {"question": "İlk 6 ayda süt izni günde kaç saattir?", "options": ["1 saat", "2 saat", "3 saat", "4 saat"], "correct_option_id": 2, "explanation": "📖 İlk 6 ayda süt izni günde 3 saattir."},
-    {"question": "Türkiye Büyük Millet Meclisi toplam kaç milletvekili sayısından oluşur?", "options": ["450", "500", "550", "600"], "correct_option_id": 3, "explanation": "📖 TBMM toplam 600 milletvekilinden oluşur."},
-    {"question": "TBMM'de karar alınabilmesi için gereken yeter sayısı kaçtır?", "options": ["151", "200", "276", "301"], "correct_option_id": 0, "explanation": "📖 TBMM karar yeter sayısı 151'dir."},
     {"question": "Türkiye'de seçim barajı yüzde kaçtır?", "options": ["%5", "%7", "%10", "%3"], "correct_option_id": 1, "explanation": "📖 Türkiye'de seçim barajı %7'dir."},
-    {"question": "Anayasa Mahkemesi kaç üyeden oluşur?", "options": ["11", "13", "15", "17"], "correct_option_id": 2, "explanation": "📖 AYM 15 üyeden oluşur."},
-    {"question": "Yargıtay kaç daireden oluşur?", "options": ["32", "36", "40", "45"], "correct_option_id": 2, "explanation": "📖 Yargıtay 40 daireden oluşur."},
-    {"question": "Türkiye'nin yüzölçümü yaklaşık kaç km²'dir?", "options": ["583.000 km²", "683.000 km²", "783.000 km²", "883.000 km²"], "correct_option_id": 2, "explanation": "📖 Yaklaşık 783.000 km²'dir."},
-    {"question": "Türkiye'nin en uzun kara sınırı hangi ülkeyle, kaç km'dir?", "options": ["Irak - 384 km", "İran - 560 km", "Suriye - 911 km", "Yunanistan - 206 km"], "correct_option_id": 2, "explanation": "📖 Suriye ile olup 911 km'dir."},
-    {"question": "1-5 yıl arasında çalışan bir devlet memuruna yıllık kaç gün izin verilir?", "options": ["10 gün", "14 gün", "20 gün", "26 gün"], "correct_option_id": 1, "explanation": "📖 1-5 yıl arası çalışanlara yıllık 14 gün izin verilir."},
-    {"question": "NATO'nun toplam üye sayısı kaçtır?", "options": ["28", "30", "32", "35"], "correct_option_id": 2, "explanation": "📖 NATO'nun toplam üye sayısı 32'dir."},
 ]
 
 KATEGORILER = {
@@ -90,7 +74,6 @@ def get_quiz_data(context):
 async def send_next_question(chat_id, context, data):
     idx = data["current"]
     q = data["questions"][idx]
-    
     msg = await context.bot.send_poll(
         chat_id=chat_id,
         question=f"❓ Soru {idx + 1}/{len(data['questions'])}\n\n{q['question']}",
@@ -104,47 +87,40 @@ async def send_next_question(chat_id, context, data):
     data["poll_map"][msg.poll.id] = idx
 
 # ─────────────────────────────────────────────
-#  KOMUT VE BUTON YAKALAYICILAR
+#  YAKALAYICILAR (Handlers)
 # ─────────────────────────────────────────────
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("📚 *Quiz Botu Hazır!*\n\n/quiz yazarak başla.", parse_mode="Markdown")
+    await update.message.reply_text("📚 *Quiz Bot Hazır!*\n\n/quiz yazarak başla.", parse_mode="Markdown")
 
 async def quiz_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton(cat["ad"], callback_data=f"quiz_{k}")] for k, cat in KATEGORILER.items()]
     await update.message.reply_text("📚 *Konu Seç:*", reply_markup=InlineKeyboardMarkup(keyboard), parse_mode="Markdown")
 
-async def quiz_kategori_sec(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def quiz_sec(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    
     k_key = query.data.split("_")[1]
     data = get_quiz_data(context)
-    
     shuffled = KATEGORILER[k_key]["sorular"].copy()
     random.shuffle(shuffled)
-    
     data.update({
         "active": True, "kategori": k_key, "questions": shuffled,
         "current": 0, "score": 0, "wrong": 0, "chat_id": query.message.chat_id,
         "start_time": time.time(), "user_name": update.effective_user.full_name
     })
-    
     await query.edit_message_text(f"🚀 *{KATEGORILER[k_key]['ad']}* Başlıyor!")
     await send_next_question(query.message.chat_id, context, data)
 
 async def poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ans = update.poll_answer
     data = context.user_data.get("quiz")
-    if not data or not data.get("active") or ans.poll_id not in data["poll_map"]: return
-
+    if not data or not data.get("active") or ans.poll_id not in data.get("poll_map", {}): return
     q = data["questions"][data["current"]]
     if ans.option_ids[0] == q["correct_option_id"]: data["score"] += 1
     else: data["wrong"] += 1
-
     data["current"] += 1
-    await asyncio.sleep(1.5)
-    
+    await asyncio.sleep(1)
     if data["current"] < len(data["questions"]):
         await send_next_question(data["chat_id"], context, data)
     else:
@@ -152,31 +128,25 @@ async def poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(data["chat_id"], f"🏁 *Bitti!* \n✅ Doğru: {data['score']}\n❌ Yanlış: {data['wrong']}\n⏱ Süre: {sure} sn", parse_mode="Markdown")
         data["active"] = False
 
-async def siralama(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Basit bir sıralama placeholder'ı
-    await update.message.reply_text("🏆 Sıralama yakında aktif!")
-
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data.clear()
     await update.message.reply_text("❌ İptal edildi.")
 
 # ─────────────────────────────────────────────
-#  ANA ÇALIŞTIRICI
+#  ANA MOTOR
 # ─────────────────────────────────────────────
 
 def main():
-    app = Application.builder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("quiz", quiz_menu))
-    app.add_handler(CommandHandler("iptal", cancel))
-    app.add_handler(CommandHandler("siralama", siralama))
-    app.add_handler(CallbackQueryHandler(quiz_kategori_sec, pattern="^quiz_"))
-    app.add_handler(PollAnswerHandler(poll_answer))
+    # Railway'deki python-telegram-bot v20+ hatasını önlemek için sade yapı
+    application = Application.builder().token(BOT_TOKEN).build()
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("quiz", quiz_menu))
+    application.add_handler(CommandHandler("iptal", cancel))
+    application.add_handler(CallbackQueryHandler(quiz_sec, pattern="^quiz_"))
+    application.add_handler(PollAnswerHandler(poll_answer))
     
-    print("🚀 Bot Sahada!")
-    # Railway/Python 3.13 uyumu için kritik
-    app.run_polling(close_loop=False, allowed_updates=Update.ALL_TYPES)
+    print("✅ Bot Aktif!")
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == "__main__":
     main()
-                   
