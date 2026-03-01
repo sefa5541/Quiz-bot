@@ -631,7 +631,7 @@ def main():
     app.add_handler(CommandHandler("quiz", quiz_menu))
     app.add_handler(CommandHandler("iptal", cancel))
     app.add_handler(CommandHandler("siralama", siralama))
-    app.add_handler(CallbackQueryHandler(quiz_kategori_sec, pattern="^quiz_"))
+    app.add_handler(CallbackQueryHandler(quiz_kategori_sec, pattern=".*"))
     app.add_handler(CallbackQueryHandler(siralama_goster, pattern="^siralama_"))
     app.add_handler(PollAnswerHandler(poll_answer))
     print("✅ Quiz Bot çalışıyor...")
