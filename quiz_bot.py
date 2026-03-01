@@ -635,7 +635,7 @@ def main():
     app.add_handler(CallbackQueryHandler(siralama_goster, pattern="^siralama_"))
     app.add_handler(PollAnswerHandler(poll_answer))
     print("✅ Quiz Bot çalışıyor...")
-    app.run_polling(allowed_updates=["message", "poll_answer", "callback_query"])
+    app.run_polling()
 
 
 if __name__ == "__main__":
