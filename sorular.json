@@ -1,219 +1,40 @@
 [
-  {
-    "kategori": "İYUK",
-    "question": "İdari yargıda yazılı yargılama usulü uygulanır. Ancak Danıştay, bölge idare mahkemeleri ve idare mahkemelerinde bakılan davalarda taraflardan birinin isteği üzerine ne yapılabilir?",
-    "options": ["Keşif", "Duruşma", "Bilirkişi incelemesi", "Sözlü savunma"],
-    "correct_option_id": 1,
-    "explanation": "Madde 17/1: İptal ve 25.000 TL'yi aşan tam yargı davalarında tarafların isteği üzerine duruşma yapılır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Dava açma süresi geçtikten sonra idari makamlara yapılan başvurular süreyi nasıl etkiler?",
-    "options": ["Süreyi canlandırır", "Süreyi durdurur", "Geçmiş süreyi etkilemez", "Süreyi sıfırlar"],
-    "correct_option_id": 2,
-    "explanation": "Madde 7: Süre geçtikten sonra yapılan başvurular, bitmiş olan dava açma süresini yeniden başlatmaz."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İvedi yargılama usulünde, savunma verme süresi kaç gündür?",
-    "options": ["7 gün", "15 gün", "30 gün", "60 gün"],
-    "correct_option_id": 1,
-    "explanation": "Madde 20/A: İvedi yargılama usulünde savunma süresi 15 gündür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Aşağıdakilerden hangisi idari yargıda ilk inceleme konularından biri değildir?",
-    "options": ["Görev ve yetki", "Ehliyet", "İşlemin yerindeliği", "Süre aşımı"],
-    "correct_option_id": 2,
-    "explanation": "Madde 14: İlk incelemede görev, yetki, ehliyet, süre gibi hususlara bakılır. Yerindelik incelemesi yapılamaz."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Danıştay'da dava açma süresi kural olarak kaç gündür?",
-    "options": ["15", "30", "60", "90"],
-    "correct_option_id": 2,
-    "explanation": "Madde 7/1: Danıştay ve idare mahkemelerinde genel dava açma süresi 60 gündür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Vergi mahkemelerinde dava açma süresi kural olarak kaç gündür?",
-    "options": ["15", "30", "45", "60"],
-    "correct_option_id": 1,
-    "explanation": "Madde 7/1: Vergi mahkemelerinde dava açma süresi 30 gündür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari yargıda davanın ihbarı hangi kanun hükümlerine göre yapılır?",
-    "options": ["CMK", "HMK", "İcra İflas Kanunu", "TMK"],
-    "correct_option_id": 1,
-    "explanation": "Madde 31: Bu kanunda hüküm bulunmayan hallerde Hukuk Muhameleri Kanunu (HMK) uygulanır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Tam yargı davalarında, uyuşmazlık miktarının artırılması (ıslah) kaç kez yapılabilir?",
-    "options": ["Sınırsız", "2", "1", "Hiç yapılamaz"],
-    "correct_option_id": 2,
-    "explanation": "Madde 16/4: Tam yargı davalarında dava dilekçesinde belirtilen miktar, bir defaya mahsus olmak üzere artırılabilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İstinaf yoluna başvurulmuş olması, kararın yürütülmesini kendiliğinden durdurur mu?",
-    "options": ["Evet, durdurur", "Hayır, durdurmaz", "Sadece memur davalarında durdurur", "Sadece vergi davalarında durdurur"],
-    "correct_option_id": 1,
-    "explanation": "Madde 52/1: Temyiz veya istinaf yoluna başvurulmuş olması, kararın yürütülmesini durdurmaz."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Bölge idare mahkemesi kararlarına karşı hangi yola başvurulabilir?",
-    "options": ["İstinaf", "Temyiz", "İtiraz", "Karar düzeltme"],
-    "correct_option_id": 1,
-    "explanation": "Madde 46: Bölge idare mahkemesi kararlarına karşı Danıştay'da temyiz yoluna başvurulabilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari yargıda yanlış hasım (husumet) gösterilmesi halinde ne yapılır?",
-    "options": ["Dava reddedilir", "Dosya işlemden kaldırılır", "Dava gerçek hasma tebliğ edilir", "Dava düşer"],
-    "correct_option_id": 2,
-    "explanation": "Madde 15/1-c: Davanın yanlış hasma açılması halinde, dilekçenin gerçek hasma tebliğine karar verilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari makamların sessiz kalması (sükutu) kaç gün sonra reddedilmiş sayılır?",
-    "options": ["15", "30", "60", "90"],
-    "correct_option_id": 1,
-    "explanation": "Madde 10: Otuz gün içinde cevap verilmezse istek reddedilmiş sayılır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Kararın düzeltilmesi yolu idari yargıda halen mevcut mudur?",
-    "options": ["Evet", "Hayır (Kaldırıldı)", "Sadece Danıştay'da var", "Sadece Vergi'da var"],
-    "correct_option_id": 1,
-    "explanation": "7035 sayılı Kanun ile karar düzeltme yolu idari yargılama usulünden kaldırılmıştır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Yürütmenin durdurulması kararı verilebilmesi için işlemin hangi özelliği taşıması gerekir?",
-    "options": ["Açıkça hukuka aykırı olması", "Telafisi güç zarar doğurması", "Hem hukuka aykırı hem telafisi güç zarar olması", "Kamu yararına aykırı olması"],
-    "correct_option_id": 2,
-    "explanation": "Madde 27: İki şartın (hukuka aykırılık ve telafisi güç zarar) birlikte gerçekleşmesi zorunludur."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Dava açma süresini durduran 'üst makama başvuru' (Madde 11), kaç gün içinde yapılmalıdır?",
-    "options": ["15", "30", "60", "90"],
-    "correct_option_id": 2,
-    "explanation": "Madde 11: İlgililer tarafından idari dava açılmadan önce, idari işlemin kaldırılması veya değiştirilmesi üst makamdan 60 gün içinde istenebilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Keşif ve bilirkişi masraflarının süresinde yatırılmaması halinde ne olur?",
-    "options": ["Dava reddedilir", "Dosya yenilenene kadar bekletilir", "Mevcut delillere göre karar verilir veya dava açılmamış sayılır", "İdare kazanmış sayılır"],
-    "correct_option_id": 2,
-    "explanation": "Madde 31 (HMK atfıyla): Giderler yatırılmazsa o delilden vazgeçilmiş sayılır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari sözleşmelerden doğan davalar hangi mahkemede görülür?",
-    "options": ["Asliye Hukuk", "İdare Mahkemesi", "Danıştay", "Sayıştay"],
-    "correct_option_id": 1,
-    "explanation": "Madde 2: İdari sözleşmelerden dolayı taraflar arasında çıkan uyuşmazlıklara ilişkin davalar idari yargıda görülür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Bölge İdare Mahkemeleri arasındaki yetki uyuşmazlığını kim çözer?",
-    "options": ["Anayasa Mahkemesi", "Yargıtay", "Danıştay", "İçişleri Bakanlığı"],
-    "correct_option_id": 2,
-    "explanation": "Madde 43: Bölge idare mahkemeleri arasındaki yetki ve görev uyuşmazlıklarını Danıştay çözer."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Aynı yanlışlıkların yapılması nedeniyle dilekçesi ikinci kez reddedilen davacının durumu ne olur?",
-    "options": ["Tekrar dava açabilir", "Davası reddedilir", "Davası düşer", "Hakim uyarılır"],
-    "correct_option_id": 1,
-    "explanation": "Madde 15/5: Dilekçelerdeki yanlışlıklar giderilmezse, davanın reddine karar verilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Feragat (davadan vazgeçme) halinde yargılama giderleri kime yüklenir?",
-    "options": ["İdareye", "Yarı yarıya paylaştırılır", "Feragat eden tarafa", "Devlet karşılar"],
-    "correct_option_id": 2,
-    "explanation": "HMK hükümleri gereği feragat eden taraf haksız çıkmış sayılır ve giderleri öder."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari dava açma süresi kural olarak ne kadardır?",
-    "options": ["İdare Mahkemelerinde 30 gün", "Danıştay ve İdare Mahkemelerinde 60 gün", "Vergi Mahkemelerinde 60 gün", "Hepsinde 15 gün"],
-    "correct_option_id": 1,
-    "explanation": "Madde 7/1: Dava açma süresi Danıştayda ve idare mahkemelerinde 60 gündür."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Dava açma süresinin bitmesi 'Çalışmaya Ara Verme' (Adli Tatil) zamanına rastlarsa, süre ne kadar uzar?",
-    "options": ["3 gün", "7 gün", "15 gün", "30 gün"],
-    "correct_option_id": 1,
-    "explanation": "Madde 8/3: Ara vermenin sona erdiği günü izleyen tarihten itibaren yedi gün uzamış sayılır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari makamlara yapılan başvurularda kaç gün içinde cevap verilmezse istek reddedilmiş sayılır?",
-    "options": ["15 gün", "30 gün", "60 gün", "90 gün"],
-    "correct_option_id": 1,
-    "explanation": "Madde 10/2: Otuz gün içinde bir cevap verilmezse istek reddedilmiş sayılır."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "Yürütmenin durdurulması kararına karşı kaç gün içinde itiraz edilebilir?",
-    "options": ["7 gün", "15 gün", "30 gün", "60 gün"],
-    "correct_option_id": 0,
-    "explanation": "Madde 27/7: Yürütmenin durdurulması kararlarına karşı 7 gün içinde itiraz edilebilir."
-  },
-  {
-    "kategori": "İYUK",
-    "question": "İdari eylemlerden hakları ihlal edilenlerin idareye başvurmaları için öngörülen üst süre sınırı nedir?",
-    "options": ["1 yıl", "2 yıl", "5 yıl", "10 yıl"],
-    "correct_option_id": 2,
-    "explanation": "Madde 13/1: Eylem tarihinden itibaren en geç beş yıl içinde başvurulmalıdır."
-  },
-  {
-    "kategori": "CMK",
-    "question": "Gözaltı süresi, yakalama anından itibaren en fazla kaç saattir?",
-    "options": ["12 saat", "24 saat", "48 saat", "72 saat"],
-    "correct_option_id": 1,
-    "explanation": "📖 Gözaltı süresi yirmi dört saati geçemez."
-  },
-  {
-    "kategori": "CMK",
-    "question": "Tutuklama kararını hangi merci verir?",
-    "options": ["Savcı", "Kolluk Amiri", "Sulh Ceza Hâkimi", "Vali"],
-    "correct_option_id": 2,
-    "explanation": "📖 Soruşturma evresinde tutuklama kararını Sulh Ceza Hâkimi verir."
-  },
-  {
-    "kategori": "CMK",
-    "question": "İfade almada en çok kaç müdafi (avukat) hazır bulunabilir?",
-    "options": ["1", "2", "3", "Sınırsız"],
-    "correct_option_id": 2,
-    "explanation": "📖 İfade almada en çok üç müdafi hazır bulunabilir."
-  },
-  {
-    "kategori": "VATANDASLIK",
-    "question": "Türkiye'de seçim barajı yüzde kaçtır?",
-    "options": ["%5", "%7", "%10", "%3"],
-    "correct_option_id": 1,
-    "explanation": "📖 Türkiye'de seçim barajı %7'dir."
-  },
-  {
-    "kategori": "VATANDASLIK",
-    "question": "Anayasa Mahkemesi kaç üyeden oluşur?",
-    "options": ["11", "13", "15", "17"],
-    "correct_option_id": 2,
-    "explanation": "📖 AYM 15 üyeden oluşur."
-  },
-  {
-    "kategori": "VATANDASLIK",
-    "question": "TBMM toplam kaç milletvekilinden oluşur?",
-    "options": ["450", "550", "600", "650"],
-    "correct_option_id": 2,
-    "explanation": "📖 TBMM toplam 600 milletvekilinden oluşur."
-  }
+  { "kategori": "İYUK", "question": "İdari yargıda kural olarak uygulanan yargılama usulü hangisidir?", "options": ["Sözlü yargılama usulü", "Yazılı yargılama usulü", "Pazarlık usulü", "Tahkim usulü"], "correct_option_id": 1, "explanation": "Madde 1/2: İdari yargıda yazılı yargılama usulü uygulanır." },
+  { "kategori": "İYUK", "question": "Danıştay ve idare mahkemelerinde genel dava açma süresi kaç gündür?", "options": ["15", "30", "60", "90"], "correct_option_id": 2, "explanation": "Madde 7/1: Genel dava açma süresi 60 gündür." },
+  { "kategori": "İYUK", "question": "Vergi mahkemelerinde dava açma süresi kural olarak kaç gündür?", "options": ["15", "30", "45", "60"], "correct_option_id": 1, "explanation": "Madde 7/1: Vergi mahkemelerinde süre 30 gündür." },
+  { "kategori": "İYUK", "question": "Adli tatilde (çalışmaya ara verme) biten süreler ne kadar uzar?", "options": ["3 gün", "7 gün", "15 gün", "30 gün"], "correct_option_id": 1, "explanation": "Madde 8/3: Ara vermenin sona erdiği günü izleyen tarihten itibaren 7 gün uzar." },
+  { "kategori": "İYUK", "question": "Yürütmenin durdurulması kararına karşı itiraz süresi kaç gündür?", "options": ["7 gün", "15 gün", "30 gün", "60 gün"], "correct_option_id": 0, "explanation": "Madde 27/7: İtiraz süresi 7 gündür." },
+  { "kategori": "İYUK", "question": "İvedi yargılama usulünde dava açma süresi kaç gündür?", "options": ["15 gün", "30 gün", "45 gün", "60 gün"], "correct_option_id": 1, "explanation": "Madde 20/A: İvedi yargılamada süre 30 gündür." },
+  { "kategori": "İYUK", "question": "İdari eylemlerden dolayı idareye başvuru için her halde üst süre sınırı nedir?", "options": ["1 yıl", "2 yıl", "5 yıl", "10 yıl"], "correct_option_id": 2, "explanation": "Madde 13/1: Eylemden itibaren her halde 5 yıl içinde başvurulmalıdır." },
+  { "kategori": "İYUK", "question": "Husumetin (hasmın) yanlış gösterilmesi halinde mahkeme ne yapar?", "options": ["Davayı reddeder", "Dilekçeyi iptal eder", "Gerçek hasma tebliğ eder", "Dava durdurulur"], "correct_option_id": 2, "explanation": "Madde 15/1-c: Dilekçenin gerçek hasma tebliğine karar verilir." },
+  { "kategori": "İYUK", "question": "İvedi yargılama usulünde savunma verme süresi kaç gündür?", "options": ["7", "15", "30", "60"], "correct_option_id": 1, "explanation": "Madde 20/A: Savunma süresi 15 gündür." },
+  { "kategori": "İYUK", "question": "İdari yargıda duruşma yapılmasına kim karar verebilir?", "options": ["Sadece mahkeme başkanı", "Taraflardan birinin isteği üzerine mahkeme", "Sadece savcı", "Duruşma yapılamaz"], "correct_option_id": 1, "explanation": "Madde 17/1: Tarafların isteği üzerine mahkeme duruşma yapılmasına karar verir." },
+  { "kategori": "İYUK", "question": "Tam yargı davalarında tazminat miktarı kaç kez artırılabilir?", "options": ["Hiç", "1 kez", "2 kez", "Sınırsız"], "correct_option_id": 1, "explanation": "Madde 16: Miktar bir defaya mahsus olmak üzere artırılabilir." },
+  { "kategori": "İYUK", "question": "İstinaf yoluna başvurma süresi kaç gündür?", "options": ["15", "30", "45", "60"], "correct_option_id": 1, "explanation": "Madde 45/1: İstinaf süresi 30 gündür." },
+  { "kategori": "İYUK", "question": "Temyiz yoluna başvurma süresi kaç gündür?", "options": ["15", "30", "45", "60"], "correct_option_id": 1, "explanation": "Madde 46: Temyiz süresi 30 gündür." },
+  { "kategori": "İYUK", "question": "Merkezi sınavlara ilişkin davalarda yürütmenin durdurulması kararına itiraz edilebilir mi?", "options": ["Evet", "Hayır", "Sadece Bakanlık edebilir", "Sadece ÖSYM edebilir"], "correct_option_id": 1, "explanation": "Madde 20/B: Merkezi sınavlarda yürütmenin durdurulması kararına itiraz edilemez." },
+  { "kategori": "İYUK", "question": "Karar düzeltme yolu idari yargıda halen var mıdır?", "options": ["Evet", "Hayır", "Sadece Danıştay'da", "Sadece Vergi'de"], "correct_option_id": 1, "explanation": "Karar düzeltme yolu kaldırılmıştır." },
+  { "kategori": "İYUK", "question": "Keşif ve bilirkişi masrafları kaç gün içinde yatırılmalıdır?", "options": ["7", "15", "30", "60"], "correct_option_id": 2, "explanation": "Madde 31: Mahkemece 30 gün süre verilir." },
+  { "kategori": "İYUK", "question": "Dava açıldıktan sonra davacı ölürse ve dava sadece öleni ilgilendiriyorsa ne olur?", "options": ["Mirasçılara geçer", "Dilekçe iptal edilir", "Dava durur", "İdare kazanır"], "correct_option_id": 1, "explanation": "Madde 26/1: Yalnız öleni ilgilendiren davalarda dilekçe iptal edilir." },
+  { "kategori": "İYUK", "question": "İdari makamlara yapılan başvuruya kaç gün içinde cevap verilmezse reddedilmiş sayılır?", "options": ["15", "30", "60", "90"], "correct_option_id": 1, "explanation": "Madde 10: 30 gün içinde cevap verilmezse reddedilmiş sayılır." },
+  { "kategori": "İYUK", "question": "İdari yargıda feragat (vazgeçme) mümkün müdür?", "options": ["Evet", "Hayır", "Sadece savcı izniyle", "Sadece Bakanlık izniyle"], "correct_option_id": 0, "explanation": "HMK atfıyla davadan feragat mümkündür." },
+  { "kategori": "İYUK", "question": "Bölge İdare Mahkemesi kararlarına karşı hangi yola başvurulur?", "options": ["İstinaf", "Temyiz", "İtiraz", "Karar düzeltme"], "correct_option_id": 1, "explanation": "Madde 46: Bölge İdare Mahkemesi kararları Danıştay'da temyiz edilir." },
+  { "kategori": "İYUK", "question": "İptal davalarında menfaati ihlal edilenler dava açabilir. Tam yargı davalarında hangi şart aranır?", "options": ["Menfaat ihlali", "Hak ihlali", "Vatandaşlık", "Maddi zarar"], "correct_option_id": 1, "explanation": "Madde 2: Tam yargı davalarında 'hak ihlali' şartı aranır." },
+  { "kategori": "İYUK", "question": "İdari yargıda 'Hâkimin Reddi' istemi reddedilen taraf kaç gün içinde itiraz edebilir?", "options": ["3", "7", "15", "30"], "correct_option_id": 1, "explanation": "Madde 57: Red isteminin reddine dair kararlara karşı yedi gün içinde itiraz edilebilir." },
+  { "kategori": "İYUK", "question": "Aynı yanlışlıkların yapılması nedeniyle dilekçesi ikinci kez reddedilen davacının durumu ne olur?", "options": ["Tekrar dava açabilir", "Davası reddedilir", "Davası düşer", "Hakim uyarılır"], "correct_option_id": 1, "explanation": "Madde 15/5: Dilekçelerdeki yanlışlıklar giderilmezse, davanın reddine karar verilir." },
+  { "kategori": "İYUK", "question": "Feragat (davadan vazgeçme) halinde yargılama giderleri kime yüklenir?", "options": ["İdareye", "Yarı yarıya paylaştırılır", "Feragat eden tarafa", "Devlet karşılar"], "correct_option_id": 2, "explanation": "HMK hükümleri gereği feragat eden taraf haksız çıkmış sayılır ve giderleri öder." },
+  { "kategori": "İYUK", "question": "Aşağıdakilerden hangisi idari dava türlerinden biri değildir?", "options": ["İptal davası", "Tam yargı davası", "İdari sözleşme davası", "Tespit davası"], "correct_option_id": 3, "explanation": "Madde 2/1: İdari dava türleri iptal, tam yargı ve idari sözleşme davalarıdır." },
+  { "kategori": "CMK", "question": "Gözaltı süresi, yakalama anından itibaren en fazla kaç saattir?", "options": ["12 saat", "24 saat", "48 saat", "72 saat"], "correct_option_id": 1, "explanation": "Gözaltı süresi yirmi dört saati geçemez." },
+  { "kategori": "CMK", "question": "Tutuklama kararını hangi merci verir?", "options": ["Savcı", "Kolluk Amiri", "Sulh Ceza Hâkimi", "Vali"], "correct_option_id": 2, "explanation": "Soruşturma evresinde tutuklama kararını Sulh Ceza Hâkimi verir." },
+  { "kategori": "CMK", "question": "İfade almada en çok kaç müdafi (avukat) hazır bulunabilir?", "options": ["1", "2", "3", "Sınırsız"], "correct_option_id": 2, "explanation": "İfade almada en çok üç müdafi hazır bulunabilir." },
+  { "kategori": "CMK", "question": "Arama kararı normal şartlarda kim tarafından verilir?", "options": ["Vali", "Kolluk Amiri", "Hâkim", "Kaymakam"], "correct_option_id": 2, "explanation": "Arama kararı kural olarak hâkim tarafından verilir." },
+  { "kategori": "CMK", "question": "Hangi suçlarda şüpheliye müdafi (avukat) görevlendirilmesi zorunludur?", "options": ["Tüm suçlarda", "Üst sınırı 5 yıldan fazla hapis", "Alt sınırı 5 yıldan fazla hapis", "Sadece cinayet"], "correct_option_id": 2, "explanation": "Alt sınırı beş yıldan fazla hapis cezasını gerektiren suçlarda müdafi görevlendirilmesi zorunludur." },
+  { "kategori": "VATANDASLIK", "question": "Türkiye'de seçim barajı yüzde kaçtır?", "options": ["%5", "%7", "%10", "%3"], "correct_option_id": 1, "explanation": "Türkiye'de seçim barajı %7'dir." },
+  { "kategori": "VATANDASLIK", "question": "Anayasa Mahkemesi kaç üyeden oluşur?", "options": ["11", "13", "15", "17"], "correct_option_id": 2, "explanation": "AYM 15 üyeden oluşur." },
+  { "kategori": "VATANDASLIK", "question": "TBMM toplam kaç milletvekilinden oluşur?", "options": ["450", "550", "600", "650"], "correct_option_id": 2, "explanation": "TBMM toplam 600 milletvekilinden oluşur." },
+  { "kategori": "VATANDASLIK", "question": "Cumhurbaşkanı seçilebilmek için kaç yaşını doldurmuş olmak gerekir?", "options": ["30", "35", "40", "45"], "correct_option_id": 2, "explanation": "Cumhurbaşkanı adayı olabilmek için 40 yaşını doldurmuş olmak gerekir." },
+  { "kategori": "VATANDASLIK", "question": "Devlet memurlarına tanınan babalık izni kaç gündür?", "options": ["5 gün", "7 gün", "10 gün", "14 gün"], "correct_option_id": 2, "explanation": "Babalık izni 10 gündür." },
+  { "kategori": "VATANDASLIK", "question": "Yüksek Seçim Kurulu (YSK) kaç üyeden oluşur?", "options": ["7", "9", "11", "13"], "correct_option_id": 2, "explanation": "YSK 7 asıl, 4 yedek toplam 11 üyeden oluşur." },
+  { "kategori": "VATANDASLIK", "question": "Milletvekili seçilme yaşı kaçtır?", "options": ["18", "21", "25", "30"], "correct_option_id": 0, "explanation": "2017 değişikliği ile milletvekili seçilme yaşı 18'e indirilmiştir." },
+  { "kategori": "VATANDASLIK", "question": "OHAL ilan etme yetkisi kime aittir?", "options": ["TBMM", "Cumhurbaşkanı", "MGK", "İçişleri Bakanlığı"], "correct_option_id": 1, "explanation": "OHAL ilan etme yetkisi Cumhurbaşkanı'na aittir." }
 ]
