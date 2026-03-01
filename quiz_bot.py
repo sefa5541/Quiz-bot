@@ -637,6 +637,6 @@ def main():
     print("✅ Quiz Bot çalışıyor...")
     app.run_polling(close_loop=False)
 
-
 if __name__ == "__main__":
     main()
+    
