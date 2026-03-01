@@ -2,14 +2,13 @@ import asyncio
 import random
 import time
 import logging
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import Update
 from telegram.ext import (
-    Application, CommandHandler, CallbackQueryHandler,
-    PollAnswerHandler, ContextTypes
+    Application, CommandHandler, PollAnswerHandler, ContextTypes
 )
 
-# Loglama
-logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+# Hataları Railway Logs kısmından takip edebilmeniz için
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 BOT_TOKEN = "8674782699:AAHcpRwEJkET_R4HUkfh_-ar3d35fbL-_10"
 
@@ -17,9 +16,8 @@ BOT_TOKEN = "8674782699:AAHcpRwEJkET_R4HUkfh_-ar3d35fbL-_10"
 leaderboard = {}
 
 # ─────────────────────────────────────────────
-#  CMK SORU BANKASI (Tam Liste)
+#  25 SORULUK CMK BANKASI
 # ─────────────────────────────────────────────
-
 CMK_SORULAR = [
     {"question": "CMK'ya göre 'şüpheli' hangi evrede suç şüphesi altındaki kişidir?", "options": ["Kovuşturma evresi", "Soruşturma evresi", "İstinaf evresi", "Temyiz evresi"], "correct_option_id": 1, "explanation": "📖 Madde 2/a: Soruşturma evresidir."},
     {"question": "CMK'ya göre 'sanık' kimdir?", "options": ["Soruşturma evresinde suç şüphesi altındaki kişi", "Kovuşturmanın başlamasından hükmün kesinleşmesine kadar kişi", "Kesinleşmiş mahkûmiyet kararı bulunan kişi", "Gözaltına alınan kişi"], "correct_option_id": 1, "explanation": "📖 Madde 2/b: Kovuşturma evresindeki kişidir."},
@@ -31,7 +29,7 @@ CMK_SORULAR = [
     {"question": "Teşebbüs suçlarında yetkili mahkeme hangi yer mahkemesidir?", "options": ["İlk icra hareketinin yapıldığı yer", "Son icra hareketinin yapıldığı yer", "Hazırlık hareketlerinin yapıldığı yer", "Sanığın yakalandığı yer"], "correct_option_id": 1, "explanation": "📖 Madde 12/2: Son icra hareketinin yapıldığı yerdir."},
     {"question": "CMK'ya göre 'ifade alma' kimin tarafından gerçekleştirilir?", "options": ["Yalnızca hâkim", "Yalnızca mahkeme", "Kolluk görevlileri veya Cumhuriyet savcısı", "Yalnızca Cumhuriyet savcısı"], "correct_option_id": 2, "explanation": "📖 Madde 2/g: Kolluk veya Savcı tarafından yapılır."},
     {"question": "CMK Madde 7'ye göre görevli olmayan hâkimin işlemleri ne olur?", "options": ["Hepsi geçerli", "Yenilenmesi mümkün olmayanlar dışındakiler hükümsüz", "Hepsi hükümsüz", "İtirazla geçerli olur"], "correct_option_id": 1, "explanation": "📖 Madde 7/1: Yenilenemeyenler hariç hükümsüzdür."},
-    {"question": "CMK Madde 5'e göre görevsizlik kararına karşı hangi yola başvurulabilir?", "options": ["Temyiz", "İtiraz", "İstinaf", "Yargılamanın yenilenmesi"], "correct_option_id": 1, "explanation": "📖 Madde 5/2: Adlî yargı içerisindeki görevsizlik kararlarına itiraz edilebilir."},
+    {"question": "CMK Madde 5'e göre görevsizlik kararına karşı hangi yola başvurulabilir?", "options": ["Temyiz", "İtiraz", "İstinaf", "Yargılamanın yenilenmesi"], "correct_option_id": 1, "explanation": "📖 Madde 5/2: İtiraz edilebilir."},
     {"question": "Suçun işlendiği yer belli değilse önce hangi yer mahkemesi yetkilidir?", "options": ["Mağdurun yeri", "Savcılığın yeri", "Şüpheli/sanığın yakalandığı yer", "İlk işlemin yapıldığı yer"], "correct_option_id": 2, "explanation": "📖 Madde 13/1: Yakalandığı yer mahkemesi yetkilidir."},
     {"question": "Bilişim suçlarında mağdurun yerleşim yeri yetkisi hangi maddedir?", "options": ["Madde 12/3", "Madde 12/5", "Madde 12/6", "Madde 13/2"], "correct_option_id": 2, "explanation": "📖 Madde 12/6: Bilişim suçlarında mağdurun yeri yetkilidir."},
     {"question": "Diplomatik bağışıklığı olan kamu görevlilerinin suçlarında yetkili yer?", "options": ["İstanbul", "İzmir", "Ankara", "Suç yeri"], "correct_option_id": 2, "explanation": "📖 Madde 14/4: Ankara mahkemeleri yetkilidir."},
@@ -52,51 +50,49 @@ CMK_SORULAR = [
 #  FONKSİYONLAR
 # ─────────────────────────────────────────────
 
-def format_sure(saniye):
-    saniye = int(saniye)
-    return f"{saniye // 60} dk {saniye % 60} sn" if saniye >= 60 else f"{saniye} sn"
-
 def build_leaderboard_text():
-    if not leaderboard: return "🏆 *LİDERLİK TABLOSU (CMK)*\n\nHenüz kayıt yok."
+    if not leaderboard: return "🏆 *LİDERLİK TABLOSU (CMK)*\n\nKayıt yok."
     sirali = sorted(leaderboard.values(), key=lambda x: (-x["score"], x["sure"]))
-    satirlar = [f"🏆 *LİDERLİK TABLOSU (CMK)*\n"]
+    satirlar = ["🏆 *LİDERLİK TABLOSU (CMK)*\n"]
     for i, kayit in enumerate(sirali[:10]):
         emoji = ["🥇", "🥈", "🥉"][i] if i < 3 else f"{i+1}."
-        satirlar.append(f"{emoji} {kayit['name']} — ✅ {kayit['score']}/25 | ⏱ {format_sure(kayit['sure'])}")
+        sure_dk = f"{kayit['sure'] // 60} dk {kayit['sure'] % 60} sn" if kayit['sure'] >= 60 else f"{kayit['sure']} sn"
+        satirlar.append(f"{emoji} {kayit['name']} — ✅ {kayit['score']}/25 | ⏱ {sure_dk}")
     return "\n".join(satirlar)
 
-async def send_next_question(context, data):
-    q = data["questions"][data["current"]]
-    await context.bot.send_poll(
-        chat_id=data["chat_id"],
-        question=f"❓ Soru {data['current'] + 1}/25\n\n{q['question']}",
-        options=q["options"],
-        type="quiz",
-        correct_option_id=q["correct_option_id"],
-        explanation=q["explanation"],
-        is_anonymous=False,
-        open_period=30
-    )
+async def send_q(context, data):
+    try:
+        q = data["questions"][data["current"]]
+        await context.bot.send_poll(
+            chat_id=data["chat_id"],
+            question=f"❓ Soru {data['current'] + 1}/25\n\n{q['question']}",
+            options=q["options"],
+            type="quiz",
+            correct_option_id=q["correct_option_id"],
+            explanation=q["explanation"],
+            is_anonymous=False,
+            open_period=30
+        )
+    except Exception as e:
+        logging.error(f"Soru Gönderim Hatası: {e}")
 
 # ─────────────────────────────────────────────
 #  KOMUTLAR
 # ─────────────────────────────────────────────
 
-async def quiz_hazirlik(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def start_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     chat_id = update.effective_chat.id
     
-    # Bilgilendirme mesajı
-    msg = await update.message.reply_text(
-        f"⏳ *Hazır mısın {user.full_name}?*\nCMK Sınavı 15 saniye sonra başlıyor...\n\n_Odaklanın komiserim!_ 🫡",
+    # Bilgi Mesajı
+    wait_msg = await update.message.reply_text(
+        f"⏳ *Hazırlan komiserim {user.first_name}!*\nSınav 15 saniye içinde başlıyor...\n\n_Süre dolunca ilk soru gelecek._",
         parse_mode="Markdown"
     )
     
-    # 15 Saniye Geri Sayım (Her 5 saniyede bir güncelleme yapabiliriz ama sadelik için bekletiyoruz)
+    # 15 Saniye Kesin Bekleme
     await asyncio.sleep(15)
-    
-    # Mesajı güncelle ve testi başlat
-    await msg.edit_text("🚀 *Süre Doldu! Sınav Başlıyor!*")
+    await wait_msg.delete() # Bekleme mesajını sil ki ekran temiz kalsın
     
     shuffled = CMK_SORULAR.copy()
     random.shuffle(shuffled)
@@ -106,24 +102,26 @@ async def quiz_hazirlik(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "score": 0, "chat_id": chat_id,
         "start_time": time.time(), "user_id": user.id, "user_name": user.full_name
     }
-    
-    await send_next_question(context, context.user_data["quiz"])
+    await send_q(context, context.user_data["quiz"])
 
-async def poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    answer = update.poll_answer
+async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = context.user_data.get("quiz")
     if not data or not data.get("active"): return
 
+    # Skoru Güncelle
     q = data["questions"][data["current"]]
-    if answer.option_ids[0] == q["correct_option_id"]: 
+    if update.poll_answer.option_ids[0] == q["correct_option_id"]:
         data["score"] += 1
 
     data["current"] += 1
-    await asyncio.sleep(1.2)
+    
+    # Telegram'ın nefes alması için kısa bekleme
+    await asyncio.sleep(1.5)
 
-    if data["current"] < len(data["questions"]):
-        await send_next_question(context, data)
+    if data["current"] < 25:
+        await send_q(context, data)
     else:
+        # BİTİŞ
         sure = int(time.time() - data["start_time"])
         if data["user_id"] not in leaderboard or leaderboard[data["user_id"]]["score"] < data["score"]:
             leaderboard[data["user_id"]] = {"name": data["user_name"], "score": data["score"], "sure": sure}
@@ -131,20 +129,21 @@ async def poll_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(data["chat_id"], build_leaderboard_text(), parse_mode="Markdown")
         data["active"] = False
 
-async def iptal(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data.clear()
-    await update.message.reply_text("❌ Quiz durduruldu.")
-
 async def siralama(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(build_leaderboard_text(), parse_mode="Markdown")
 
+async def iptal(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data.clear()
+    await update.message.reply_text("❌ Sınav durduruldu.")
+
 def main():
     app = Application.builder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", quiz_hazirlik))
-    app.add_handler(CommandHandler("quiz", quiz_hazirlik))
-    app.add_handler(CommandHandler("iptal", iptal))
+    app.add_handler(CommandHandler("quiz", start_quiz))
+    app.add_handler(CommandHandler("start", start_quiz))
     app.add_handler(CommandHandler("siralama", siralama))
-    app.add_handler(PollAnswerHandler(poll_answer))
+    app.add_handler(CommandHandler("iptal", iptal))
+    app.add_handler(PollAnswerHandler(handle_answer))
+    # Takılmayı önlemek için polling'i temiz başlat
     app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
